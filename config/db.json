@@ -1,0 +1,11 @@
+{
+    "services": {
+        "simas_auth": {
+            "host": "localhost",
+            "port": 5432,
+            "dbname" : "simas-auth",
+            "user": "simas",
+            "password": "Metal7390"
+        }
+    }
+}
