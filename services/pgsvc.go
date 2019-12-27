@@ -3,9 +3,10 @@ package pgsvc
 import (
 	"context"
 	"database/sql"
-	"github.com/micro/go-micro/config"
 	"log"
-	pgdb "simas-db/proto"
+
+	pgdb "github.com/cipta-ageung/simas-db/proto"
+	"github.com/micro/go-micro/config"
 )
 
 // ServiceConnection : struct

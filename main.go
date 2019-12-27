@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	pgdb "simas-db/proto"
-	pgsvc "simas-db/services"
+	pgdb "github.com/cipta-ageung/simas-db/proto"
+	pgsvc "github.com/cipta-ageung/simas-db/services"
 
 	_ "github.com/lib/pq"
 
@@ -18,9 +18,9 @@ import (
 // test runClient
 func runClient(service micro.Service) {
 
-	setup := pgdb.NewServiceConnectionService("simas_db", service.Client())
+	setup := pgdb.NewServiceConnectionService("go.micro.srv.simasdb", service.Client())
 
-	rsp, err := setup.SetupDb(context.TODO(), &pgdb.ServiceApp{Svc: "simas_auth"})
+	rsp, err := setup.SetupDb(context.TODO(), &pgdb.ServiceApp{Svc: "go.micro.srv.simaslogin"})
 
 	if err != nil {
 		log.Print(err)
