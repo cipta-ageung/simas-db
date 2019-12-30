@@ -6,7 +6,7 @@ import (
 	"time"
 
 	pgdb "github.com/cipta-ageung/simas-db/proto"
-	pgsvc "github.com/cipta-ageung/simas-db/services"
+	services "github.com/cipta-ageung/simas-db/services"
 
 	_ "github.com/lib/pq"
 
@@ -57,7 +57,7 @@ func main() {
 	)
 
 	// Register handler
-	pgdb.RegisterServiceConnectionHandler(service.Server(), new(pgsvc.ServiceConnection))
+	pgdb.RegisterServiceConnectionHandler(service.Server(), new(services.ServiceConnection))
 
 	// Run server
 	if err := service.Run(); err != nil {

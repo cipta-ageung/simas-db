@@ -1,4 +1,4 @@
-package pgsvc
+package services
 
 import (
 	"context"

@@ -1,9 +1,9 @@
 {
     "services": {
-        "go.micro.srv.simaslogin": {
+        "go.micro.srv.simasuser": {
             "host": "localhost",
             "port": 5432,
-            "dbname" : "simas-login",
+            "dbname" : "simas-user",
             "user": "simas",
             "password": "Metal7390"
         }
